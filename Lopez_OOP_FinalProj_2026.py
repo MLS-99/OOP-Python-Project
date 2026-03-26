@@ -114,7 +114,7 @@ class DNA(Seq):
 
     def __init__(self,sequence,gene,species,geneid,**kwargs):
         super().__init__(sequence,gene,species)
-        self.sequence=re.sub('[ATCGU]','N',self.sequence)
+        self.sequence=re.sub('[^ATCGU]','N',self.sequence)
         self.geneid=geneid
  
     def analysis(self):
