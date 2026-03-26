@@ -124,7 +124,15 @@ class DNA(Seq):
     def print_info(self):
         print(str(self.geneid) + " " + self.species + " " + self.gene + ": " + self.sequence)
 
-#    def reverse_complement(self):
+    def reverse_complement(self):
+        complement={'A':'T', 'T':'A', 'G':'C',
+              'C':'G', 'U':'A', 'N':'N'}
+        reverse=self.sequence[::-1]
+        revcomp=""
+        for base in rev:
+            revcomp=revcomp+complement.get(base,'N')
+        return rc
+        
 
 #    def six_frames(self):
 
