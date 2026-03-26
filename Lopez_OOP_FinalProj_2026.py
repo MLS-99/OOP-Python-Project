@@ -95,6 +95,7 @@ class Seq:
         self.sequence=sequence
         self.gene=gene
         self.species=species
+        self.kmers=[]
 
     def __str__(self):
         return self.sequence
@@ -102,8 +103,10 @@ class Seq:
     def print_record(self):
         print(self.species + " " + self.gene + ": " + self.sequence)
 
-    #def make_kmers(self, k=3):
-
+    def make_kmers(self, k=3):
+        for i in range(len(self.sequence)[-k+1]):
+            kmers.append(self.sequence[i:i+k])
+        
     #def fasta(self):
     
 class DNA(Seq):
