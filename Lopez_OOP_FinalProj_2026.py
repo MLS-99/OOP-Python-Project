@@ -127,10 +127,10 @@ class DNA(Seq):
     def reverse_complement(self):
         complement={'A':'T', 'T':'A', 'G':'C',
               'C':'G', 'U':'A', 'N':'N'}
-        reverse=self.sequence[::-1]
-        revcomp=""
+        rev=self.sequence[::-1]
+        rc=""
         for base in rev:
-            revcomp=revcomp+complement.get(base,'N')
+            rc=rc+complement.get(base,'N')
         return rc
         
 
