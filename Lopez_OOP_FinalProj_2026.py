@@ -134,8 +134,18 @@ class DNA(Seq):
         return rc
         
 
-#    def six_frames(self):
+    def six_frames(self):
+        seq=self.sequence 
+        rev=self.reverse_complement()
+        frames=[]
 
+        for i in range(3):
+            frames.appen(seq[i:])
+
+        for i in range (3):
+            frames.append(rev[i:])
+        return frames
+    
 """
 class RNA(DNA):
 
