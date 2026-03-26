@@ -114,14 +114,15 @@ class DNA(Seq):
 
     def __init__(self,sequence,gene,species,geneid,**kwargs):
         super().__init__(sequence,gene,species)
-        self.sequence=sequence
+        self.sequence=re.sub('[ATCGU]','N',self.sequence)
         self.geneid=geneid
  
     def analysis(self):
         gc=len(re.findall('G',self.sequence) + re.findall('C',self.sequence))
         return gc
 
-#    def print_info(self):
+    def print_info(self):
+        print(str(self.geneid) + " " + self.species + " " + self.gene + ": " + self.sequence)
 
 #    def reverse_complement(self):
 
