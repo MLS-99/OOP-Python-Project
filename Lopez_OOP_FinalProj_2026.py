@@ -105,7 +105,7 @@ class Seq:
 
     def make_kmers(self, k=3):
         for i in range(len(self.sequence)[-k+1]):
-            kmers.append(self.sequence[i:i+k])
+            self.kmers.append(self.sequence[i:i+k])
         
     #def fasta(self):
     
