@@ -140,7 +140,7 @@ class DNA(Seq):
         frames=[]
 
         for i in range(3):
-            frames.appen(seq[i:])
+            frames.append(seq[i:])
 
         for i in range (3):
             frames.append(rev[i:])
