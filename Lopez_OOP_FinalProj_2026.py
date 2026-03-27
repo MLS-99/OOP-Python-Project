@@ -157,16 +157,21 @@ class RNA(DNA):
       
     def make_codons(self):
         self.codons=[]
-        
         for i in range(0,len(self.sequence),3):
             codon = self.sequence[i:i+3]
-            
             if len(codon) ==3:
                 self.codons.append(codon)
                 
-'''
-    #def translate(self):
 
+    def translate(self):
+        protein=""
+        for codon in self.codons:
+            amino_acid = standard_code.get(codon, 'X')
+            protein = Protein + amino_acid
+        retuen protein 
+        
+        
+'''
 class Protein(Seq):
 
     #def __init__:
