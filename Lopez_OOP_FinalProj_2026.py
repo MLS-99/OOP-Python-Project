@@ -167,8 +167,8 @@ class RNA(DNA):
         protein=""
         for codon in self.codons:
             amino_acid = standard_code.get(codon, 'X')
-            protein = Protein + amino_acid
-        retuen protein 
+            protein = protein + amino_acid
+        return protein 
         
         
 '''
@@ -179,10 +179,8 @@ class Protein(Seq):
     #def total_hydro(self):
 
     #def mol_weight(self):
-'''
 
     
 
 x=DNA("G","tmp","m",000)
-
 '''
