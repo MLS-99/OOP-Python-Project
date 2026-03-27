@@ -151,9 +151,10 @@ class RNA(DNA):
 
     def __init__(self, sequence, gene, species, geneid, **kwargs):
         super().__init__(sequence, gene, species, geneid, **kwargs)
-        self.sequence=self.sequence.repalce('T', 'U')
+        self.sequence = self.sequence.repalce('T', 'U')
         self.codons=[]
         
+'''       
     #def make_codons(self):
  
     #def translate(self):
@@ -171,7 +172,4 @@ class Protein(Seq):
 
 x=DNA("G","tmp","m",000)
 
-
-
-
-
+'''
