@@ -166,7 +166,7 @@ class Protein(Seq):
 
     #def mol_weight(self):
 
-"""
+
     
 
 x=DNA("G","tmp","m",000)
