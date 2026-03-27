@@ -179,7 +179,7 @@ class Protein(Seq):
     #def total_hydro(self):
 
     #def mol_weight(self):
-
+'''
 
     
 
