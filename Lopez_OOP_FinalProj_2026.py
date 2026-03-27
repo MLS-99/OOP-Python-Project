@@ -154,9 +154,17 @@ class RNA(DNA):
         self.sequence = self.sequence.replace('T', 'U')
         self.codons=[]
         
-'''       
-    #def make_codons(self):
- 
+      
+    def make_codons(self):
+        self.codons=[]
+        
+        for i in range(0,len(self.sequence),3):
+            codon = self.sequence[i:i+3]
+            
+            if len(codon) ==3:
+                self.codons.append(codon)
+                
+'''
     #def translate(self):
 
 class Protein(Seq):
