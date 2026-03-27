@@ -114,7 +114,7 @@ class DNA(Seq):
 
     def __init__(self,sequence,gene,species,geneid,**kwargs):
         super().__init__(sequence,gene,species)
-        self.sequence=re.sub('[^ATCGU]','N',self.sequence)
+        self.sequence=re.sub('[^ATCG]','N',self.sequence)
         self.geneid=geneid
  
     def analysis(self):
@@ -126,7 +126,7 @@ class DNA(Seq):
 
     def reverse_complement(self):
         complement={'A':'T', 'T':'A', 'G':'C',
-              'C':'G', 'U':'A', 'N':'N'}
+              'C':'G', 'N':'N'}
         rev=self.sequence[::-1]
         rc=""
         for base in rev:
@@ -146,10 +146,13 @@ class DNA(Seq):
             frames.append(rev[i:])
         return frames
     
-"""
+
 class RNA(DNA):
 
-    #def __init__(self):
+    def __init__(self, sequence, gene, species, geneid, **kwargs):
+        super().__init__(sequence, gene, species, geneid, **kwargs)
+        self.sequence=self.sequence.repalce('T', 'U')
+        self.codons=[]
         
     #def make_codons(self):
  
