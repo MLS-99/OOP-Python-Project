@@ -187,9 +187,12 @@ class Protein(Seq):
         return total
 
         
-'''
-    #def mol_weight(self):
-
+    def mol_weight(self):
+        total=0
+        for aa in self.sequence:
+            total=total+aa_mol_weights.get(aa,0)
+        return total
     
+'''
 x=DNA("G","tmp","m",000)
 '''
