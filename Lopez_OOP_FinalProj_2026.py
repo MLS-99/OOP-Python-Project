@@ -171,13 +171,19 @@ class RNA(DNA):
         return protein 
         
         
-'''
+
 class Protein(Seq):
 
-    #def __init__:
+    def __init__(self, sequence, gene, species, geneid=None, **kwargs):
+        super().__init__(sequence, gene, species)
+        self.sequence=re.sub('[^A-Z]', 'X', self.sequence)
+        self.geneid=geneid
+        
 
-    #def total_hydro(self):
-
+    def total_hydro(self):
+        totals=0
+        for aa in self.seqeunce
+'''
     #def mol_weight(self):
 
     
