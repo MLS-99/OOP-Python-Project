@@ -181,12 +181,15 @@ class Protein(Seq):
         
 
     def total_hydro(self):
-        totals=0
-        for aa in self.seqeunce
+        total=0
+        for aa in self.sequence:
+            total=total+kyte_doolittle.get(aa, 0)
+        return total
+
+        
 '''
     #def mol_weight(self):
 
     
-
 x=DNA("G","tmp","m",000)
 '''
